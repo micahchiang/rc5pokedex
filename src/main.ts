@@ -1,9 +1,12 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { PokedexAppComponent, environment } from './app/';
+
+import { environment } from './app';
+import { PokedexAppModule } from './app/pokedex.module';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(PokedexAppComponent);
+platformBrowserDynamic().bootstrapModule(PokedexAppModule);
+
